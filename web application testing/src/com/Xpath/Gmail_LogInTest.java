@@ -1,0 +1,45 @@
+package com.Xpath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Gmail_LogInTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver driver;
+		String applicationUrlAddress="http://gmail.com";
+
+		// Automating Chrome Browser
+		System.setProperty("webdriver.chrome.driver","./WebDriverFiles/chromedriver.exe");
+		driver = new ChromeDriver();
+
+		driver.get(applicationUrlAddress);
+
+		driver.manage().window().maximize();
+
+		// name="identifier"
+		By emailProperty=By.xpath("//*[@name='identifier']");
+		WebElement email=driver.findElement(emailProperty);
+		email.sendKeys("Narender.livetech@gmail.com");
+
+		// <span jsname="V67aGc" class="VfPpkd-vQzf8d">Next</span>
+
+		/*
+		Xpath using text() - text Method
+		//tagname[text()='textvalue']
+		*/
+		//span[text()='Next']
+
+		// By nextButtonProperty=By.xpath("//*[@class='VfPpkd-vQzf8d']");
+		By nextButtonProperty=By.xpath("//span[text()='Next']");
+		WebElement nextButton=driver.findElement(nextButtonProperty);
+		nextButton.click();
+		
+	}
+}
+
+
+	

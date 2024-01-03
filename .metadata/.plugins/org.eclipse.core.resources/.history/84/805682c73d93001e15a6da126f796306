@@ -1,0 +1,23 @@
+package com.Arrays;
+
+public class SingleDimensionalArraysExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int srini[]=new int[3];
+		
+		srini[0]=25;
+		//System.out.println(srini[0]);
+		
+		srini[0]=35;
+		srini[1]=50;
+		srini[2]=60;
+		
+		 
+		
+	
+
+	}
+
+}

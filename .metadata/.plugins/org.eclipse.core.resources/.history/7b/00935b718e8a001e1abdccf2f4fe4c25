@@ -1,0 +1,10 @@
+package loopsexample;
+
+public class WhileLoopExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
